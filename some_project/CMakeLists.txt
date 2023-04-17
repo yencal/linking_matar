@@ -14,7 +14,6 @@ if (KOKKOS)
     add_definitions(-DHAVE_THREADS=1)
   #else ()
   endif()
-
 endif()
 
 set(MATAR_PATH "../MATAR")

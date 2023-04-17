@@ -8,6 +8,19 @@ git clone --recursive https://github.com/yencal/linking_matar.git
 Assume that the project we want to linked to MATAR and Kokkos is called `some_project`.
 In the `some_project\CMakeLists.txt` simply add
 ```
+if (KOKKOS)
+  add_definitions(-DHAVE_KOKKOS=1)
+  if (CUDA)
+    add_definitions(-DHAVE_CUDA=1)
+  elseif (HIP)
+    add_definitions(-DHAVE_HIP=1)
+  elseif (OPENMP)
+    add_definitions(-DHAVE_OPENMP=1)
+  elseif (THREADS)
+    add_definitions(-DHAVE_THREADS=1)
+  #else ()
+  endif()
+endif()
 set(MATAR_PATH "../MATAR") # path to where you have MATAR downloaded
 add_subdirectory(${MATAR_PATH} matar)
 include_directories("${MATAR_PATH}/src")
