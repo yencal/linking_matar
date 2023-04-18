@@ -43,7 +43,7 @@ export Kokkos_DIR=../MATAR/src/install-kokkos-openmp/kokkos/
 * Step 3:
 You can build `some_project` using
 ```
-cmake . -DKokkos=ON -DOPENMP=ON
+cmake . -DKOKKOS=ON -DOPENMP=ON
 make
 ```
 
@@ -62,6 +62,6 @@ export Kokkos_DIR=../MATAR/src/install-kokkos-cuda/kokkos/
 
 * Step 3:
 ```
-cmake . -DKokkos=ON -DCUDA=ON
+cmake . -DKOKKOS=ON -DCUDA=ON
 make
 ```
