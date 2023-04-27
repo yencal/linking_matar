@@ -1,6 +1,6 @@
 # linking_matar
 ## Description
-`linking_matar` is an example on how to link new projects to MATAR and Kokkos. To follow alone with the example clone the repo
+`linking_matar` is an example on how to link new projects to MATAR and Kokkos. To follow along with the example clone the repo
 ```
 git clone --recursive https://github.com/yencal/linking_matar.git
 ```
